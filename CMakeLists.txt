@@ -370,6 +370,7 @@ find_package(Threads REQUIRED)
 
 if(SMTK_ENABLE_VTK_SUPPORT AND NOT SMTK_ENABLE_PARAVIEW_SUPPORT)
   find_package(VTK REQUIRED)
+  find_package(vtkIOParallelExodus QUIET)
   if (SMTK_ENABLE_PYTHON_SUPPORT AND NOT VTK_WRAP_PYTHON)
     message(FATAL_ERROR
       "SMTK with Python and VTK support requires that VTK also be built with "
